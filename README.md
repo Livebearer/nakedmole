@@ -1,21 +1,41 @@
-# nakedmole
+# PDF Renamer
 
-This repository contains a simple Python script for renaming PDF files using information extracted from their metadata.
+Renomeador automatizado de arquivos PDF com base em metadados (título, autor, ano) e interface gráfica em Python.
 
-## Script
+## Funcionalidades
 
-`rename_pdfs.py` provides a small Tkinter-based interface that lets you choose a folder, decide whether to include subfolders, and select between renaming files individually or in batch mode. The script relies on `PyPDF2` to read each file's metadata (Title, Author and CreationDate) and renames the file accordingly. In batch mode, a `read.me` report is created listing the original and new file names.
+- Extração de metadados usando `PyPDF2`, com fallback por leitura bruta.
+- Renomeação interativa com janela de confirmação (editar, aceitar, pular).
+- Evita sobrescrever arquivos (gera nomes únicos).
+- Geração de relatório `read.me` com histórico das alterações.
+- Suporte a interface gráfica com `tkinter`.
 
-Install the required dependency with:
+## Requisitos
 
-```bash
-pip install PyPDF2
-```
+- Python 3.8 ou superior
+- Bibliotecas:
+  - PyPDF2
+  - tkinter (incluso na instalação padrão do Python)
 
-Run the script with:
+## Como usar
 
-```bash
-python3 rename_pdfs.py
-```
+1. Execute o script:
+   ```bash
+   python pdf_renamer_0.02.1_dev.py
+   ```
 
-A window will open asking you to select the folder and options.
+2. Selecione a pasta contendo arquivos PDF.
+
+3. Escolha os arquivos a renomear, revise ou edite os nomes sugeridos.
+
+## Histórico de versões
+
+Veja [CHANGELOG.md](./CHANGELOG.md)
+
+## Licença
+
+Este projeto está sob a licença MIT.
+
+## Autor
+
+Livebearer
